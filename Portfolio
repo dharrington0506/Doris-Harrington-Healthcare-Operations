@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Healthcare Operations Leadership Portfolio featuring 10 strategic case studies in patient experience, performance improvement, analytics, workforce strategy, implementation, and executive partnership." name="description"/>
+<title>Doris Harrington, MSW | Healthcare Operations Leadership Portfolio</title>
+<style>
+    :root {
+      --navy: #0b1f33;
+      --navy-2: #173b5f;
+      --teal: #0f766e;
+      --teal-soft: #e9f7f5;
+      --blue-soft: #eef5fb;
+      --ink: #1e293b;
+      --muted: #64748b;
+      --line: #dbe4ec;
+      --white: #ffffff;
+      --shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+      --radius: 22px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: #f7fafc;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    .shell { width: min(1180px, calc(100% - 32px)); margin: 0 auto; }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255,255,255,.93);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(219,228,236,.9);
+    }
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 68px;
+      gap: 20px;
+    }
+    .brand { font-weight: 800; color: var(--navy); letter-spacing: -.02em; }
+    .nav { display: flex; gap: 20px; font-size: .93rem; color: var(--muted); }
+    .nav a:hover { color: var(--navy); }
+    .hero {
+      background:
+        radial-gradient(circle at 90% 10%, rgba(15,118,110,.24), transparent 28%),
+        linear-gradient(135deg, #071522 0%, #0d2c47 58%, #0f4c5c 100%);
+      color: white;
+      padding: 88px 0 76px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.4fr .8fr;
+      gap: 54px;
+      align-items: end;
+    }
+    .kicker {
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-size: .78rem;
+      font-weight: 800;
+      color: #9fe2dc;
+      margin-bottom: 18px;
+    }
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.35rem, 4.7vw, 4.65rem);
+      font-weight: 600;
+      line-height: 1.06;
+      letter-spacing: .025em;
+      white-space: nowrap;
+      margin: 0 0 26px;
+      max-width: 980px;
+    }
+    .hero p {
+      font-size: 1.15rem;
+      color: #d5e6f2;
+      max-width: 760px;
+      margin: 0;
+    }
+    .hero-card {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 24px;
+      padding: 26px;
+    }
+    .hero-card strong { display:block; font-size: 1.05rem; margin-bottom: 8px; }
+    .hero-card p { font-size: .95rem; color: #dcebf4; }
+    .metrics {
+      margin-top: -34px;
+      position: relative;
+      z-index: 5;
+    }
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+    .metric {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+    .metric b {
+      display: block;
+      color: var(--teal);
+      font-size: 2rem;
+      letter-spacing: -.04em;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .metric span { color: var(--muted); font-size: .9rem; }
+    .section { padding: 78px 0; }
+    .section-head {
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap: 30px;
+      margin-bottom: 28px;
+    }
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .11em;
+      font-size: .73rem;
+      font-weight: 800;
+      color: var(--teal);
+      margin-bottom: 8px;
+    }
+    h2 {
+      margin: 0;
+      color: var(--navy);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      letter-spacing: -.04em;
+      line-height: 1.08;
+    }
+    .section-intro { max-width: 650px; color: var(--muted); }
+    .filterbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .filter {
+      border: 1px solid var(--line);
+      background: white;
+      color: var(--muted);
+      padding: 10px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: .2s ease;
+    }
+    .filter:hover, .filter.active {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: white;
+    }
+    .project-list { display: grid; gap: 20px; }
+    .project-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(15,23,42,.045);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .project-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+    .project-summary {
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 22px;
+      align-items: start;
+    }
+    .project-number {
+      width: 72px;
+      height: 72px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      background: var(--blue-soft);
+      color: var(--navy-2);
+      font-size: .78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 1.2;
+    }
+    h3 {
+      margin: 0 0 6px;
+      color: var(--navy);
+      font-size: clamp(1.45rem, 2.5vw, 2rem);
+      line-height: 1.15;
+      letter-spacing: -.025em;
+    }
+    .org { margin: 0; color: var(--muted); }
+    .meta { display:flex; flex-wrap:wrap; gap:10px 18px; margin-top: 12px; font-size: .9rem; color: var(--muted); }
+    .meta span::before { content: "•"; color: var(--teal); margin-right: 8px; }
+    .highlight-row, .competency-cloud { display:flex; flex-wrap:wrap; gap:8px; margin: 22px 0 16px; }
+    .chip {
+      display:inline-flex;
+      align-items:center;
+      background: var(--teal-soft);
+      color: #0d5f59;
+      border: 1px solid #ccebe7;
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-size: .82rem;
+      font-weight: 700;
+    }
+    .summary-copy { color: #435267; margin: 0 0 18px; }
+    .toggle {
+      border: 0;
+      background: none;
+      color: var(--navy);
+      font-weight: 800;
+      cursor: pointer;
+      padding: 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .toggle span {
+      width: 28px;
+      height: 28px;
+      display:grid;
+      place-items:center;
+      border-radius:50%;
+      background: var(--blue-soft);
+      transition: transform .2s ease;
+    }
+    .toggle[aria-expanded="true"] span { transform: rotate(45deg); }
+    .details {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height .55s ease, opacity .35s ease, margin-top .35s ease;
+    }
+    .details.open { max-height: 8000px; opacity: 1; margin-top: 28px; }
+    .section-grid {
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 16px;
+    }
+    .section-grid section, .full-width-block, .quote-block, .star-block {
+      background: #fbfdff;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 20px;
+    }
+    h4 {
+      color: var(--navy);
+      font-size: 1rem;
+      margin: 0 0 10px;
+      letter-spacing: -.01em;
+    }
+    .section-grid p, .section-grid ul, .quote-block p, .star-row p {
+      margin: 0;
+      color: #4b5a6f;
+      font-size: .94rem;
+    }
+    ul { padding-left: 20px; }
+    li + li { margin-top: 7px; }
+    .full-width-block, .quote-block, .star-block { margin-top: 16px; }
+    .quote-block { border-left: 5px solid var(--teal); }
+    .star-row { display:grid; grid-template-columns: 110px 1fr; gap: 18px; padding: 12px 0; border-top: 1px solid var(--line); }
+    .star-row:first-of-type { border-top: 0; }
+    .star-row strong { color: var(--teal); }
+    .capabilities {
+      background: white;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .cap-grid {
+      display:grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 14px;
+    }
+    .cap-item {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      padding:18px 20px;
+      background:#f8fbfd;
+      border:1px solid var(--line);
+      border-radius:16px;
+    }
+    .cap-item span { color: var(--navy); font-weight: 800; }
+    .cap-item small { color: var(--muted); }
+    .footer {
+      background: var(--navy);
+      color: white;
+      padding: 46px 0;
+      margin-top: 30px;
+    }
+    .footer p { color: #cbd8e5; max-width: 760px; }
+    .backtop {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 0;
+      background: var(--navy);
+      color: white;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      display:none;
+    }
+    .backtop.show { display:block; }
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .metric-grid { grid-template-columns: repeat(2,1fr); }
+      .section-grid, .cap-grid { grid-template-columns: 1fr; }
+      .nav { display:none; }
+    }
+    @media (max-width: 640px) {
+      .hero { padding-top: 66px; }
+      .metric-grid { grid-template-columns: 1fr 1fr; }
+      .project-card { padding: 20px; }
+      .project-summary { grid-template-columns: 1fr; }
+      .project-number { width: 64px; height: 64px; }
+      .star-row { grid-template-columns: 1fr; gap: 4px; }
+      .section { padding: 58px 0; }
+    }
+    @media print {
+      .topbar, .filterbar, .toggle, .backtop { display:none !important; }
+      .hero { padding: 34px 0; }
+      .metrics { margin-top: 18px; }
+      .project-card { break-inside: avoid; box-shadow:none; }
+      .details { max-height:none !important; opacity:1 !important; overflow:visible !important; margin-top:20px !important; }
+      body { background:white; }
+    }
+  
+    .profile-section { padding: 64px 0 54px; background: white; border-bottom: 1px solid var(--line); }
+    .profile-grid { display: grid; grid-template-columns: 1.35fr .65fr; gap: 34px; align-items: start; }
+    .profile-copy { color: #435267; font-size: 1.04rem; max-width: 760px; margin: 14px 0 24px; }
+    .credential-card { background: var(--blue-soft); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; }
+    .credential-card h3 { font-size: 1.2rem; margin-bottom: 16px; }
+    .credential-list { display: grid; gap: 12px; }
+    .credential-item { background: white; border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; }
+    .credential-item strong { display:block; color: var(--navy); }
+    .credential-item span { display:block; color: var(--muted); font-size: .9rem; margin-top: 2px; }
+    .metrics { margin-top: 0; padding: 64px 0 24px; background: #f7fafc; }
+    .metrics-head { margin-bottom: 24px; }
+    .metrics-head p { margin: 10px 0 0; color: var(--muted); max-width: 760px; }
+    .metric-grid { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+    .key-outcomes { background: linear-gradient(135deg, #f2fbfa 0%, #eef5fb 100%); border: 1px solid #cfe7e4; border-radius: 18px; padding: 22px; margin-top: 18px; }
+    .key-outcomes h4 { margin-top: 0; }
+    .key-outcomes ul { margin-bottom: 0; }
+    @media (max-width: 900px) { .profile-grid { grid-template-columns: 1fr; } }
+
+    /* About Me and centered leadership-impact refinements */
+    .profile-grid {
+      grid-template-columns: 280px minmax(0, 1fr);
+      gap: 42px;
+      align-items: center;
+    }
+    .profile-photo-wrap { display: flex; justify-content: center; }
+    .profile-photo {
+      width: 100%;
+      max-width: 280px;
+      aspect-ratio: 1 / 1.16;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      background: var(--blue-soft);
+    }
+    .about-name {
+      margin: 0 0 4px;
+      color: var(--navy);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      letter-spacing: -.04em;
+      line-height: 1.05;
+    }
+    .about-title {
+      margin: 0 0 18px;
+      color: var(--teal);
+      font-weight: 800;
+      font-size: 1.05rem;
+    }
+    .profile-copy p { margin: 0 0 14px; }
+    .profile-copy p:last-child { margin-bottom: 0; }
+    .profile-support-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 30px;
+      align-items: stretch;
+    }
+
+    .profile-support-column {
+      display: grid;
+      gap: 18px;
+      align-content: start;
+    }
+    .timeline-label {
+      font-weight: 700;
+      color: var(--navy);
+      margin-right: 6px;
+    }
+    .expertise-card {
+      background: #fbfdff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      text-align: center;
+      align-self: start;
+    }
+    .expertise-card h3 { font-size: 1.2rem; margin-bottom: 12px; }
+    .expertise-card .competency-cloud {
+      justify-content: center;
+      max-width: 760px;
+      margin: 14px auto 0;
+    }
+    .metrics-head { text-align: center; }
+    .metrics-head p { margin-left: auto; margin-right: auto; }
+    .metric-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: stretch;
+      gap: 16px;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    .metric {
+      flex: 0 1 245px;
+      min-height: 150px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    @media (max-width: 900px) {
+      .profile-grid { grid-template-columns: 220px minmax(0, 1fr); gap: 28px; }
+      .profile-support-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 700px) {
+      h1 { white-space: normal; font-size: clamp(2.15rem, 11vw, 3.2rem); }
+      .profile-grid { grid-template-columns: 1fr; text-align: center; }
+      .profile-photo { max-width: 250px; }
+      .profile-copy { margin-left: auto; margin-right: auto; text-align: left; }
+      .profile-grid .competency-cloud { justify-content: center; }
+      .metric { flex-basis: min(100%, 300px); }
+    }
+
+
+    .profile-support-grid > .credential-card { height: 100%; }
+    .profile-support-grid > .credential-card h3 { text-align: center; }
+
+
+    /* Final hero refinements */
+    .hero-grid {
+      grid-template-columns: 1fr;
+      align-items: center;
+    }
+    .hero h1 {
+      color: #ffffff !important;
+      display: block;
+      visibility: visible;
+      opacity: 1;
+    }
+    .hero .shell {
+      position: relative;
+      z-index: 1;
+    }
+    .hero-card {
+      display: none !important;
+    }
+    
+
+    /* Executive portfolio refinement */
+    body {
+      background: #f4f7fa;
+    }
+
+    .topbar {
+      background: rgba(255,255,255,.97);
+      box-shadow: 0 1px 0 rgba(15,23,42,.04);
+    }
+
+    .topbar-inner {
+      min-height: 64px;
+    }
+
+    .brand {
+      font-size: .98rem;
+      letter-spacing: .01em;
+    }
+
+    .hero {
+      min-height: 420px;
+      display: flex;
+      align-items: center;
+      padding: 96px 0 88px;
+      background:
+        linear-gradient(90deg, rgba(7,21,34,.96), rgba(13,44,71,.94)),
+        linear-gradient(135deg, #071522 0%, #0d2c47 58%, #0f4c5c 100%);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .hero-grid {
+      max-width: 980px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero h1 {
+      margin: 0 auto 18px;
+      max-width: 980px;
+      color: #ffffff !important;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.8rem, 5.5vw, 5.4rem);
+      font-weight: 500;
+      line-height: 1.02;
+      letter-spacing: -.025em;
+      white-space: normal;
+    }
+
+    .hero p {
+      margin: 0 auto;
+      max-width: 880px;
+      color: #d8e7f2;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      letter-spacing: .01em;
+    }
+
+    .profile-section {
+      padding: 76px 0 66px;
+    }
+
+    .profile-photo {
+      border-radius: 8px;
+      box-shadow: 0 18px 45px rgba(15,23,42,.12);
+    }
+
+    .credential-card {
+      border-radius: 10px;
+      background: #f8fbfd;
+      box-shadow: none;
+    }
+
+    .credential-item {
+      border-radius: 8px;
+    }
+
+    .metrics {
+      padding: 70px 0 34px;
+    }
+
+    .metric {
+      border-radius: 10px;
+      box-shadow: 0 12px 28px rgba(15,23,42,.055);
+    }
+
+    .section {
+      padding: 86px 0;
+    }
+
+    .section-head {
+      margin-bottom: 34px;
+    }
+
+    .project-list {
+      gap: 28px;
+    }
+
+    .project-card {
+      position: relative;
+      border-radius: 10px;
+      padding: 34px 36px 30px;
+      border: 1px solid #d7e0e8;
+      box-shadow: 0 10px 28px rgba(15,23,42,.045);
+      background: #ffffff;
+      overflow: hidden;
+    }
+
+    .project-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 5px;
+      background: linear-gradient(180deg, var(--teal), var(--navy-2));
+    }
+
+    .project-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 40px rgba(15,23,42,.08);
+    }
+
+    .project-index-label {
+      margin: 0 0 18px 112px;
+      color: var(--teal);
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .project-summary {
+      grid-template-columns: 84px 1fr;
+      gap: 26px;
+    }
+
+    .project-number {
+      width: 64px;
+      height: 64px;
+      border-radius: 8px;
+      background: #eef3f7;
+      color: var(--navy);
+    }
+
+    .project-card h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 600;
+      letter-spacing: -.02em;
+    }
+
+    .highlight-row {
+      margin-left: 110px;
+    }
+
+    .summary-copy {
+      margin-left: 110px;
+      max-width: 880px;
+      line-height: 1.72;
+    }
+
+    .toggle {
+      margin-left: 110px;
+      color: var(--teal);
+    }
+
+    .toggle span {
+      background: var(--teal-soft);
+      color: var(--teal);
+    }
+
+    .details.open {
+      margin-left: 110px;
+    }
+
+    .filterbar {
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .filter {
+      border-radius: 6px;
+      padding: 9px 12px;
+      background: transparent;
+    }
+
+    .filter:hover, .filter.active {
+      background: var(--navy);
+      color: white;
+    }
+
+    .footer {
+      padding: 58px 0;
+    }
+
+    @media (max-width: 760px) {
+      .hero {
+        min-height: 350px;
+        padding: 74px 0 64px;
+      }
+
+      .project-card {
+        padding: 26px 22px 24px;
+      }
+
+      .project-index-label,
+      .highlight-row,
+      .summary-copy,
+      .toggle,
+      .details.open {
+        margin-left: 0;
+      }
+
+      .project-summary {
+        grid-template-columns: 1fr;
+      }
+    }
+    </style>
+</head>
+<body>
+<header class="topbar">
+<div class="shell topbar-inner">
+<a class="brand" href="#top">Doris Harrington, MSW</a>
+<nav aria-label="Primary" class="nav"><a href="#profile">Profile</a>
+<a href="#impact">Impact</a>
+<a href="#projects">Projects</a>
+</nav>
+</div>
+</header>
+<main id="top">
+<section class="hero">
+<div class="shell hero-grid">
+<div>
+<h1>Doris Harrington, MSW</h1>
+<p>Healthcare Operations | Strategy | Performance Improvement | Program Leadership</p>
+</div>
+</div>
+</section><section class="profile-section" id="profile">
+<div class="shell">
+<div class="profile-grid">
+<div class="profile-photo-wrap">
+<img alt="Professional headshot of Doris Harrington" class="profile-photo" src="data:image/jpeg;base64,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"/>
+</div>
+<div>
+<div class="eyebrow">About Me</div>
+<div class="profile-copy">
+<p>I am a healthcare operations leader with experience managing multi-site hospital programs, leading cross-functional teams, and driving operational excellence across academic medical centers, community hospitals, and integrated health systems throughout Southern California.</p>
+<p>Throughout my career, I have partnered with executive leaders, hospital administrators, nurse managers, and frontline teams to improve operational performance, enhance patient experience, optimize workforce programs, and implement scalable process improvements. My leadership approach combines Lean methodologies, data-driven decision-making, and collaborative team development to translate strategic priorities into measurable operational results.</p>
+<p>My experience spans healthcare operations, program and project management, performance improvement, executive reporting, workforce strategy, change management, and clinical operations, with a passion for building sustainable systems that improve both organizational performance and the patient experience.</p>
+</div>
+</div>
+</div>
+<div class="profile-support-grid"><aside class="credential-card"><h3>Education</h3><div class="credential-list"><div class="credential-item"><strong>Master of Social Work and Business Innovation (MSW)</strong><span>University of Southern California</span></div><div class="credential-item"><strong>Bachelor of Science</strong><span>California State University, Los Angeles</span></div></div></aside><aside class="credential-card">
+<h3>Professional Credentials</h3>
+<div class="credential-list">
+<div class="credential-item"><strong>Lean Six Sigma Green Belt</strong><span>ASQ Certified</span></div>
+<div class="credential-item"><strong>Project Management Professional (PMP)</strong><span>Certification in progress</span></div>
+<div class="credential-item"><strong>Associate Clinical Social Worker (ACSW)</strong><span>California professional registration</span></div></div>
+</aside></div></div>
+</section>
+<section class="metrics" id="impact"><div class="shell"><div class="metrics-head"><div class="eyebrow">Leadership Impact</div><h2>Leadership Impact by the Numbers</h2><p>A snapshot of the operational scale, workforce responsibility, and leadership reach delivered across multiple healthcare systems.</p></div><div class="metric-grid"><div class="metric"><b>18</b><span>Hospital programs supported</span></div><div class="metric"><b>15+</b><span>Clinical department launches led</span></div><div class="metric"><b>1,000+</b><span>Hospital volunteers supported</span></div><div class="metric"><b>80+</b><span>Clinical departments supported</span></div><div class="metric"><b>7</b><span>Hospital partner programs directly managed</span></div><div class="metric"><b>9</b><span>Operational leaders coached and developed</span></div><div class="metric"><b>136+</b><span>FTEs managed across hospital partner programs</span></div></div></div></section>
+<section class="section" id="projects">
+<div class="shell">
+<div class="section-head">
+<div>
+<div class="eyebrow">Featured Work</div>
+<h2>Strategic initiatives</h2>
+</div>
+<p class="section-intro">Filter by capability, scan the executive summaries, or expand any project to view the complete case study, strategic deliverables, business impact, project management competencies, and key outcomes.</p>
+</div>
+<div aria-label="Filter projects" class="filterbar" role="group">
+<button class="filter active" data-filter="All">All</button><button class="filter" data-filter="Patient Experience">Patient Experience</button><button class="filter" data-filter="Performance Measurement">Performance Measurement</button><button class="filter" data-filter="Workflow Analysis">Workflow Analysis</button><button class="filter" data-filter="Crisis Operations">Crisis Operations</button><button class="filter" data-filter="Workforce Recruitment">Workforce Recruitment</button><button class="filter" data-filter="Executive Dashboards">Executive Dashboards</button><button class="filter" data-filter="Performance Management">Performance Management</button><button class="filter" data-filter="Program Implementation">Program Implementation</button><button class="filter" data-filter="Process Standardization">Process Standardization</button><button class="filter" data-filter="Executive Relationship Management &amp; Strategic Partnership">Executive Relationship Management &amp; Strategic Partnership</button>
+</div>
+<div class="project-list">
+<article class="project-card" data-category="Patient Experience" id="project-1">
+<div class="project-index-label">CASE STUDY 01</div><div class="project-summary">
+<div class="project-number">Project 01</div>
+<div class="project-heading-wrap">
+<div class="eyebrow">Patient Experience</div>
+<h3>Let's Connect Patient Experience Initiative</h3>
+<p class="org">COPE Health Solutions in partnership with Kaiser Permanente Irvine and Kaiser Permanente Anaheim</p>
+<div class="meta">
+<span><strong class="timeline-label">Project Timeline:</strong> January 2026 – Present</span>
+<span>Regional Manager / Project Lead</span>
+</div>
+</div>
+</div>
+<div class="highlight-row"><span class="chip">2 hospitals</span><span class="chip">24 inpatient departments</span><span class="chip">~500 volunteers</span><span class="chip">HCAHPS-focused</span></div>
+<p class="summary-copy">Led the implementation of the Let's Connect Patient Experience Initiative across Kaiser Permanente Irvine and Kaiser Permanente Anaheim to strengthen nurse-patient relationships, improve patient-centered communication, and support improvements in HCAHPS patient experience scores. Partnered with Kaiser Permanente leadership to successfully implement the initiative across 24 inpatient departments, coordinating approximately 500 volunteers and establishing a standardized process to ensure a Let's Connect form was completed for every patient admission.</p>
+<button aria-controls="details-1" aria-expanded="false" class="toggle">
+        View full case study <span aria-hidden="true">+</span>
+</button>
+<div class="details" id="details-1">
+<div class="section-grid">
+<section><h4>Business Problem</h4><p>Kaiser Permanente sought to improve the patient experience by strengthening rapport between nurses and patients early in the hospitalization. Leadership identified an opportunity to improve performance on the HCAHPS survey question: “During this hospital stay, how often did nurses treat you with courtesy and respect?” A standardized process was needed to help care teams better understand what mattered most to each patient and incorporate those preferences into daily care interactions.</p></section>
+<section><h4>Project Goal</h4><p>Implement the Let's Connect initiative across Kaiser Permanente Irvine and Kaiser Permanente Anaheim by establishing a standardized process for documenting patient preferences, supporting nurse-patient communication, and improving patient experience.</p></section>
+<section><h4>My Role</h4><p>As Regional Manager, I served as the implementation lead for the Let's Connect initiative across two Kaiser Permanente hospitals. I coordinated implementation activities, partnered with hospital leadership, supported operational adoption, monitored progress, and ensured successful rollout across 24 inpatient departments.</p></section>
+<section><h4>Stakeholders</h4><ul><li>Kaiser Permanente Chief Nursing Operating Office</li><li>Kaiser Permanente Performance Improvement Consultant</li><li>Nurse Managers</li><li>Unit Leadership</li><li>COPE Health Solutions Leadership</li><li>Volunteer Program Managers</li><li>Approximately 500 Hospital Volunteers</li><li>Nursing Staff</li><li>Patients and Families</li></ul></section>
+<section><h4>Planning Phase</h4><ul><li>Partnered with Kaiser Permanente leadership to understand project goals and implementation expectations.</li><li>Developed implementation plans and rollout timelines for both hospitals.</li><li>Coordinated deployment across 24 inpatient departments.</li><li>Established communication, reporting, and monitoring processes.</li><li>Prepared volunteer leaders and volunteers for implementation.</li></ul></section>
+<section><h4>Execution Phase</h4><ul><li>Directed implementation across Kaiser Permanente Irvine and Anaheim.</li><li>Coordinated with nurse managers and volunteer leaders to integrate the Let's Connect workflow into daily patient admissions.</li><li>Led training and communication efforts for approximately 500 volunteers.</li><li>Monitored department-level implementation and addressed operational barriers.</li><li>Tracked adoption and completion rates.</li><li>Reported implementation progress and operational updates to the Chief Nursing Operating Office.</li></ul></section>
+<section><h4>Strategic Deliverables</h4><ul><li>Let's Connect implementation strategy</li><li>Standardized patient preference documentation workflow</li><li>Volunteer implementation and training materials</li><li>Department rollout schedule</li><li>Leadership progress reports</li><li>Performance monitoring process</li></ul></section>
+<section><h4>Business Impact</h4><ul><li>Successfully implemented the initiative across 2 Kaiser Permanente hospitals.</li><li>Coordinated implementation across 24 inpatient departments.</li><li>Led rollout involving approximately 500 volunteers.</li><li>Established a standardized process with the goal of completing a Let's Connect form for every patient admission.</li><li>Improved collaboration between volunteers and nursing teams to support personalized patient care.</li><li>Supported Kaiser Permanente's strategy to improve HCAHPS patient experience performance through stronger nurse-patient communication.</li></ul></section>
+</div>
+<section class="full-width-block">
+<h4>Project Management Competencies</h4>
+<div class="competency-cloud"><span class="chip">Integration Management</span><span class="chip">Stakeholder Management</span><span class="chip">Scope Management</span><span class="chip">Schedule Management</span><span class="chip">Communications Management</span><span class="chip">Resource Management</span><span class="chip">Quality Management</span><span class="chip">Change Management</span><span class="chip">Monitoring &amp; Controlling</span></div>
+</section><section class="key-outcomes"><h4>Key Outcomes</h4><ul><li>Successfully implemented the initiative across 2 Kaiser Permanente hospitals.</li><li>Coordinated implementation across 24 inpatient departments.</li><li>Led rollout involving approximately 500 volunteers.</li><li>Established a standardized process with the goal of completing a Let's Connect form for every patient admission.</li></ul></section>
+</div>
+</article>
+<article class="project-card" data-category="Performance Measurement" id="project-2">
+<div class="project-index-label">CASE STUDY 02</div><div class="project-summary">
+<div class="project-number">Project 02</div>
+<div class="project-heading-wrap">
+<div class="eyebrow">Performance Measurement</div>
+<h3>Intentional Rounding Performance Measurement Initiative</h3>
+<p class="org">COPE Health Solutions</p>
+<div class="meta">
+<span><strong class="timeline-label">Project Timeline:</strong> May 2025 – Present</span>
+<span>Regional Manager / Project Lead</span>
+</div>
+</div>
+</div>
+<div class="highlight-row"><span class="chip">8 hospital partners</span><span class="chip">5-site implementation lead</span><span class="chip">~1,000 volunteers</span><span class="chip">Monthly executive reporting</span></div>
+<p class="summary-copy">Led the implementation of the Intentional Rounding Performance Measurement Initiative across eight hospital partners to quantify volunteer contributions, improve operational reporting, and demonstrate the value of volunteer programs in supporting frontline clinical teams. Co-developed the standardized intentional rounding documentation process and led implementation across five hospital sites, supporting approximately 1,000 volunteers and providing monthly performance reports directly to hospital leadership.</p>
+<button aria-controls="details-2" aria-expanded="false" class="toggle">
+        View full case study <span aria-hidden="true">+</span>
+</button>
+<div class="details" id="details-2">
+<div class="section-grid">
+<section><h4>Business Problem</h4><p>COPE Health Solutions sought to demonstrate the measurable impact of its volunteer programs by quantifying how volunteers supported nursing teams and enhanced inpatient operations. While volunteers performed meaningful tasks throughout the hospital, there was no standardized process to capture this work or report its value to hospital partners. A consistent documentation and reporting system was needed to measure volunteer contributions, demonstrate workforce support, and provide hospital leaders with actionable performance data.</p></section>
+<section><h4>Project Goal</h4><p>Develop and implement a standardized intentional rounding process that documented volunteer activities, measured operational support provided to inpatient units, and delivered meaningful monthly and quarterly performance reports to hospital partners.</p></section>
+<section><h4>My Role</h4><p>As Regional Manager, I co-developed the Intentional Rounding documentation process and served as the implementation lead for five hospital sites. I partnered with hospital leadership, coordinated rollout activities, trained teams, monitored adoption, ensured data quality, and presented monthly performance reports directly to hospital partners.</p></section>
+<section><h4>Stakeholders</h4><ul><li>Hospital Executive Leadership</li><li>Nurse Managers</li><li>Clinical Unit Leadership</li><li>COPE Health Solutions Leadership</li><li>Volunteer Program Managers</li><li>Approximately 1,000 Hospital Volunteers</li><li>Nursing Staff</li><li>Patients</li></ul></section>
+<section><h4>Planning Phase</h4><ul><li>Collaborated with COPE leadership to define project objectives and reporting requirements.</li><li>Co-developed the standardized Intentional Rounding documentation tool.</li><li>Established key performance metrics and reporting expectations.</li><li>Developed implementation plans for participating hospitals.</li><li>Coordinated rollout strategy across multiple partner organizations.</li></ul></section>
+<section><h4>Execution Phase</h4><ul><li>Led implementation across five hospital partner sites.</li><li>Trained regional managers, volunteer leaders, and volunteers on standardized documentation procedures.</li><li>Monitored implementation progress and documentation compliance.</li><li>Ensured consistent collection of volunteer activity data.</li><li>Oversaw monthly reporting and quality review processes.</li><li>Presented performance reports directly to hospital leadership each month.</li><li>Used reporting insights to identify opportunities for operational improvement and increased volunteer utilization.</li></ul></section>
+<section><h4>Strategic Deliverables</h4><ul><li>Intentional Rounding documentation tool</li><li>Standardized implementation process</li><li>Monthly hospital performance reports</li><li>Quarterly operational summaries</li><li>Volunteer activity metrics</li><li>Performance dashboards</li><li>Reporting procedures and documentation</li></ul></section>
+<section><h4>Business Impact</h4><ul><li>Standardized intentional rounding documentation across eight hospital partners.</li><li>Led implementation across five hospitals, supporting approximately 1,000 volunteers.</li><li>Created a scalable system for measuring volunteer operational impact and frontline support.</li><li>Provided hospital partners with monthly and quarterly reports demonstrating volunteer contributions and workforce value.</li><li>Increased visibility into volunteer activities and nursing support provided across inpatient units.</li><li>Strengthened partner relationships through transparent, data-driven reporting and operational insights.</li></ul></section>
+</div>
+<section class="full-width-block">
+<h4>Project Management Competencies</h4>
+<div class="competency-cloud"><span class="chip">Project Integration Management</span><span class="chip">Scope Management</span><span class="chip">Schedule Management</span><span class="chip">Stakeholder Engagement</span><span class="chip">Communications Management</span><span class="chip">Resource Management</span><span class="chip">Quality Management</span><span class="chip">Performance Measurement</span><span class="chip">Monitoring &amp; Controlling</span><span class="chip">Continuous Improvement</span></div>
+</section><section class="key-outcomes"><h4>Key Outcomes</h4><ul><li>Standardized intentional rounding documentation across eight hospital partners.</li><li>Led implementation across five hospitals, supporting approximately 1,000 volunteers.</li><li>Created a scalable system for measuring volunteer operational impact and frontline support.</li><li>Provided hospital partners with monthly and quarterly reports demonstrating volunteer contributions and workforce value.</li></ul></section>
+</div>
+</article>
+<article class="project-card" data-category="Workflow Analysis" id="project-3">
+<div class="project-index-label">CASE STUDY 03</div><div class="project-summary">
+<div class="project-number">Project 03</div>
+<div class="project-heading-wrap">
+<div class="eyebrow">Workflow Analysis</div>
+<h3>Patient Journey &amp; Clinic Workflow Analysis</h3>
+<p class="org">COPE Health Solutions in partnership with Martin Luther King Jr. Community Hospital</p>
+<div class="meta">
+<span><strong class="timeline-label">Project Timeline:</strong> July 2024 – August 2024</span>
+<span>Regional Manager / Project Lead</span>
+</div>
+</div>
+</div>
+<div class="highlight-row"><span class="chip">3 outpatient clinics</span><span class="chip">4 observers</span><span class="chip">Real-time workflow study</span><span class="chip">Executive-sponsored</span></div>
+<p class="summary-copy">Led the operational execution of a patient journey and clinic workflow analysis across three outpatient clinics at Martin Luther King Jr. Community Hospital. Partnered with hospital leadership to map the patient experience, deploy observation teams, and collect real-time workflow data to better understand how patients spent time throughout their clinic visits and identify opportunities to improve operational efficiency.</p>
+<button aria-controls="details-3" aria-expanded="false" class="toggle">
+        View full case study <span aria-hidden="true">+</span>
+</button>
+<div class="details" id="details-3">
+<div class="section-grid">
+<section><h4>Business Problem</h4><p>Martin Luther King Jr. Community Hospital wanted to better understand the outpatient patient experience by measuring how patients spent time throughout their clinic appointments. Leadership sought to quantify the amount of time patients spent waiting compared with the time they spent interacting with physicians and the care team. Without objective workflow data, it was difficult to identify opportunities to improve patient flow and the overall patient experience.</p></section>
+<section><h4>Project Goal</h4><p>Conduct a comprehensive patient journey analysis to quantify each stage of the outpatient visit, identify workflow inefficiencies, and provide operational data to support future process improvement initiatives.</p></section>
+<section><h4>My Role</h4><p>As Regional Manager, I partnered with the MLKCH Project Manager to plan and execute the workflow study. I helped map the patient journey, coordinated volunteer deployment across three clinics, ensured standardized data collection, and monitored project execution throughout the observation period.</p></section>
+<section><h4>Stakeholders</h4><ul><li>Senior Vice President of Population Health</li><li>MLKCH Project Manager</li><li>Clinic Leadership</li><li>Physicians</li><li>Nursing Staff</li><li>COPE Health Solutions Leadership</li><li>Four Volunteer Observers</li></ul></section>
+<section><h4>Planning Phase</h4><ul><li>Collaborated with hospital leadership to define study objectives and observation methodology.</li><li>Mapped the complete patient workflow from arrival through departure.</li><li>Identified operational checkpoints and required data elements.</li><li>Developed volunteer observation assignments.</li><li>Prepared volunteers to consistently document patient movement throughout the clinic visit.</li></ul></section>
+<section><h4>Execution Phase</h4><ul><li>Deployed and supervised four volunteers across three outpatient clinics.</li><li>Oversaw real-time observation of patient movement through each stage of the clinic visit.</li><li>Ensured standardized data collection and documentation.</li><li>Worked closely with the MLKCH Project Manager to monitor study progress and resolve operational questions.</li><li>Verified the completeness and consistency of collected data.</li></ul></section>
+<section><h4>Strategic Deliverables</h4><ul><li>Patient journey workflow map</li><li>Clinic workflow observations</li><li>Time study documentation</li><li>Operational data set</li><li>Workflow analysis supporting executive review</li></ul></section>
+<section><h4>Business Impact</h4><ul><li>Successfully executed a patient journey study across three outpatient clinics.</li><li>Coordinated deployment of four volunteer observers to collect standardized operational data.</li><li>Produced objective workflow data to support executive decision-making.</li><li>Created a comprehensive view of the outpatient patient experience from arrival through completion of care.</li><li>Provided leadership with actionable information to guide future workflow improvement initiatives.</li></ul></section>
+</div>
+<section class="full-width-block">
+<h4>Project Management Competencies</h4>
+<div class="competency-cloud"><span class="chip">Project Planning</span><span class="chip">Scope Management</span><span class="chip">Stakeholder Engagement</span><span class="chip">Resource Coordination</span><span class="chip">Communications Management</span><span class="chip">Quality Assurance</span><span class="chip">Process Mapping</span><span class="chip">Performance Measurement</span><span class="chip">Monitoring &amp; Controlling</span></div>
+</section><section class="key-outcomes"><h4>Key Outcomes</h4><ul><li>Successfully executed a patient journey study across three outpatient clinics.</li><li>Coordinated deployment of four volunteer observers to collect standardized operational data.</li><li>Produced objective workflow data to support executive decision-making.</li><li>Created a comprehensive view of the outpatient patient experience from arrival through completion of care.</li></ul></section>
+</div>
+</article>
+<article class="project-card" data-category="Crisis Operations" id="project-4">
+<div class="project-index-label">CASE STUDY 04</div><div class="project-summary">
+<div class="project-number">Project 04</div>
+<div class="project-heading-wrap">
+<div class="eyebrow">Crisis Operations</div>
+<h3>Pharmacy Operations Support During Labor Strike</h3>
+<p class="org">COPE Health Solutions in partnership with Kaiser Permanente</p>
+<div class="meta">
+<span><strong class="timeline-label">Project Timeline:</strong> February 2026</span>
+<span>Regional Manager / Project Lead</span>
+</div>
+</div>
+</div>
+<div class="highlight-row"><span class="chip">Rapid response</span><span class="chip">Week-long deployment</span><span class="chip">2-hour staffing shifts</span><span class="chip">Operational continuity</span></div>
+<p class="summary-copy">Led the rapid planning and implementation of volunteer support operations during a labor strike impacting Kaiser Permanente pharmacy services. Partnered with Kaiser leadership to develop and execute a workforce deployment strategy that helped maintain pharmacy operations by assisting patients with medication pickup processes, mobile notification enrollment, mail-order registration, crowd management, and wayfinding.</p>
+<button aria-controls="details-4" aria-expanded="false" class="toggle">
+        View full case study <span aria-hidden="true">+</span>
+</button>
+<div class="details" id="details-4">
+<div class="section-grid">
+<section><h4>Business Problem</h4><p>During a labor strike affecting Kaiser Permanente's pharmacy department, pharmacy operations experienced increased patient volumes, longer wait times, and limited staff availability. Kaiser leadership required immediate operational support to minimize disruptions, improve patient flow, and ensure patients could continue accessing medications through alternative pickup and notification methods.</p></section>
+<section><h4>Project Goal</h4><p>Rapidly implement a volunteer support program that reduced operational strain on pharmacy staff, improved the patient experience during the labor strike, and maintained efficient pharmacy operations through non-clinical support services.</p></section>
+<section><h4>My Role</h4><p>As Regional Manager, I served as the project lead responsible for planning and executing the volunteer support strategy. I collaborated with Kaiser leadership to understand operational needs, developed the implementation plan, aligned internal and hospital stakeholders, created volunteer training resources, and coordinated volunteer staffing throughout the duration of the project.</p></section>
+<section><h4>Stakeholders</h4><ul><li>Kaiser Permanente Leadership</li><li>Pharmacy Leadership</li><li>Pharmacy Staff</li><li>COPE Health Solutions Leadership</li><li>Volunteer Program Managers</li><li>Hospital Volunteers</li><li>Patients</li></ul></section>
+<section><h4>Planning Phase</h4><ul><li>Met with Kaiser leadership to assess operational needs and define volunteer responsibilities.</li><li>Developed the implementation strategy and deployment plan.</li><li>Coordinated stakeholder alignment between Kaiser and COPE leadership.</li><li>Established volunteer schedules and staffing plans.</li><li>Created training materials outlining pharmacy workflows and volunteer responsibilities.</li><li>Produced a training video demonstrating patient support procedures and mobile enrollment processes.</li></ul></section>
+<section><h4>Execution Phase</h4><ul><li>Recruited and staffed volunteers in two-hour shifts throughout the week-long initiative.</li><li>Trained volunteers on pharmacy workflows, patient communication, and mobile notification enrollment.</li><li>Deployed volunteers to support pharmacy operations.</li><li>Monitored staffing coverage and adjusted schedules as operational needs changed.</li><li>Maintained ongoing communication with Kaiser leadership to ensure volunteer support aligned with daily operational priorities.</li></ul></section>
+<section><h4>Strategic Deliverables</h4><ul><li>Pharmacy volunteer deployment plan</li><li>Volunteer staffing schedule</li><li>Training materials</li><li>Volunteer instructional video</li><li>Workflow guidance documents</li><li>Daily operational support plan</li></ul></section>
+<section><h4>Business Impact</h4><ul><li>Successfully launched a rapid-response volunteer support program during a critical operational disruption.</li><li>Maintained consistent volunteer coverage throughout the week-long initiative.</li><li>Improved patient navigation and communication during periods of increased demand.</li><li>Reduced non-clinical workload for pharmacy staff, allowing them to focus on medication-related responsibilities.</li><li>Strengthened Kaiser Permanente's ability to maintain patient service during the labor strike through coordinated operational support.</li></ul></section>
+</div>
+<section class="full-width-block">
+<h4>Project Management Competencies</h4>
+<div class="competency-cloud"><span class="chip">Project Integration Management</span><span class="chip">Resource Management</span><span class="chip">Stakeholder Engagement</span><span class="chip">Communications Management</span><span class="chip">Risk Management</span><span class="chip">Schedule Management</span><span class="chip">Change Management</span><span class="chip">Monitoring &amp; Controlling</span><span class="chip">Operational Planning</span></div>
+</section><section class="key-outcomes"><h4>Key Outcomes</h4><ul><li>Successfully launched a rapid-response volunteer support program during a critical operational disruption.</li><li>Maintained consistent volunteer coverage throughout the week-long initiative.</li><li>Improved patient navigation and communication during periods of increased demand.</li><li>Reduced non-clinical workload for pharmacy staff, allowing them to focus on medication-related responsibilities.</li></ul></section>
+</div>
+</article>
+<article class="project-card" data-category="Workforce Recruitment" id="project-5">
+<div class="project-index-label">CASE STUDY 05</div><div class="project-summary">
+<div class="project-number">Project 05</div>
+<div class="project-heading-wrap">
+<div class="eyebrow">Workforce Recruitment</div>
+<h3>Workforce Recruitment &amp; Enrollment Playbook</h3>
+<p class="org">COPE Health Solutions</p>
+<div class="meta">
+<span><strong class="timeline-label">Project Timeline:</strong> December 2025 – Present</span>
+<span>Regional Manager / Project Lead</span>
+</div>
+</div>
+</div>
+<div class="highlight-row"><span class="chip">12 hospital programs</span><span class="chip">Standardized recruitment</span><span class="chip">Centralized outreach resources</span><span class="chip">FTE support</span></div>
+<p class="summary-copy">Led the development of a standardized Workforce Recruitment &amp; Enrollment Playbook used across 12 hospital partner programs to support regional leaders in achieving volunteer enrollment targets, maintaining contracted staffing levels (FTEs), and meeting quarterly training goals. The playbook established a consistent recruitment framework, centralized outreach resources, and provided actionable recruitment strategies that could be implemented across all sites.</p>
+<button aria-controls="details-5" aria-expanded="false" class="toggle">
+        View full case study <span aria-hidden="true">+</span>
+</button>
+<div class="details" id="details-5">
+<div class="section-grid">
+<section><h4>Business Problem</h4><p>COPE Health Solutions maintains contractual staffing commitments with hospital partners that require volunteer programs to consistently meet enrollment and training goals. Recruitment practices varied across sites, resulting in inconsistent volunteer pipelines and increasing the risk of falling below contracted staffing commitments. Leadership identified the need for a standardized recruitment framework that regional leaders could use to consistently build volunteer pipelines and maintain workforce capacity.</p></section>
+<section><h4>Project Goal</h4><p>Develop a comprehensive recruitment and enrollment playbook that standardized volunteer recruitment strategies, improved workforce planning, and equipped leaders with practical tools to achieve monthly enrollment goals and quarterly training objectives across all hospital partner programs.</p></section>
+<section><h4>My Role</h4><p>As Regional Manager, I led the development of the Workforce Recruitment &amp; Enrollment Playbook by organizing recruitment best practices into a standardized operational resource. I collaborated with executive leadership to create a scalable workbook that regional leaders could use to strengthen volunteer recruitment, expand community partnerships, and maintain contracted staffing levels.</p></section>
+<section><h4>Stakeholders</h4><ul><li>Assistant Vice President</li><li>Regional Directors</li><li>Regional Managers</li><li>Site Managers</li><li>Hospital Partners</li><li>Community Organizations</li><li>Academic Institutions</li><li>Volunteer Recruitment Teams</li></ul></section>
+<section><h4>Planning Phase</h4><ul><li>Identified recruitment strategies that consistently generated qualified volunteer applicants.</li><li>Organized recruitment resources into a standardized framework.</li><li>Developed a repeatable recruitment strategy aligned with monthly enrollment and quarterly training goals.</li><li>Compiled community organizations, hospital partners, academic institutions, and faculty contacts into a centralized resource.</li><li>Designed the workbook for consistent implementation across multiple hospital programs.</li></ul></section>
+<section><h4>Execution Phase</h4><ul><li>Developed the Workforce Recruitment &amp; Enrollment Playbook.</li><li>Created structured daily, weekly, monthly, and quarterly recruitment action plans.</li><li>Built centralized databases of faculty contacts, hospital partners, and community organizations.</li><li>Standardized outreach strategies and recruitment best practices.</li><li>Distributed the playbook to regional leaders supporting hospital partner programs.</li></ul></section>
+<section><h4>Strategic Deliverables</h4><ul><li>Workforce Recruitment &amp; Enrollment Playbook</li><li>Recruitment planning workbook</li><li>Faculty contact database</li><li>Community partner directory</li><li>Hospital partnership resource guide</li><li>Daily, weekly, monthly, and quarterly recruitment action plans</li><li>Standardized recruitment workflows</li></ul></section>
+<section><h4>Business Impact</h4><ul><li>Standardized recruitment practices across 12 hospital partner programs.</li><li>Created a scalable workforce planning resource supporting contractual staffing commitments.</li><li>Improved consistency in volunteer recruitment and outreach efforts.</li><li>Equipped regional leaders with a structured framework to achieve monthly enrollment and quarterly training goals.</li><li>Centralized recruitment resources, reducing duplication of effort and promoting adoption of recruitment best practices across the organization.</li></ul></section>
+</div>
+<section class="full-width-block">
+<h4>Project Management Competencies</h4>
+<div class="competency-cloud"><span class="chip">Strategic Workforce Planning</span><span class="chip">Project Planning</span><span class="chip">Stakeholder Engagement</span><span class="chip">Resource Management</span><span class="chip">Process Standardization</span><span class="chip">Change Management</span><span class="chip">Communications Management</span><span class="chip">Continuous Improvement</span><span class="chip">Knowledge Management</span></div>
+</section><section class="key-outcomes"><h4>Key Outcomes</h4><ul><li>Standardized recruitment practices across 12 hospital partner programs.</li><li>Created a scalable workforce planning resource supporting contractual staffing commitments.</li><li>Improved consistency in volunteer recruitment and outreach efforts.</li><li>Equipped regional leaders with a structured framework to achieve monthly enrollment and quarterly training goals.</li></ul></section>
+</div>
+</article>
+<article class="project-card" data-category="Executive Dashboards" id="project-6">
+<div class="project-index-label">CASE STUDY 06</div><div class="project-summary">
+<div class="project-number">Project 06</div>
+<div class="project-heading-wrap">
+<div class="eyebrow">Executive Dashboards</div>
+<h3>Executive Performance Dashboard &amp; KPI Reporting System</h3>
+<p class="org">COPE Health Solutions</p>
+<div class="meta">
+<span><strong class="timeline-label">Project Timeline:</strong> April 2025 – Present</span>
+<span>Regional Manager / Project Lead</span>
+</div>
+</div>
+</div>
+<div class="highlight-row"><span class="chip">18 hospital programs</span><span class="chip">Power BI</span><span class="chip">Real-time KPI visibility</span><span class="chip">Site Manager training</span></div>
+<p class="summary-copy">Partnered with executive leadership to develop and implement an enterprise Power BI Executive Performance Dashboard that standardized performance reporting across 18 hospital partner programs. The dashboard replaced manual reporting with real-time operational intelligence, enabling leaders to monitor key performance indicators, compare actual performance against organizational goals, identify operational gaps, and support SMART goal planning through a centralized executive reporting platform.</p>
+<button aria-controls="details-6" aria-expanded="false" class="toggle">
+        View full case study <span aria-hidden="true">+</span>
+</button>
+<div class="details" id="details-6">
+<div class="section-grid">
+<section><h4>Business Problem</h4><p>Executive leaders relied on manual reports from multiple sources, making it difficult to quickly evaluate organizational performance, identify trends, and prioritize operational improvements. Reporting lacked consistency, and leaders did not have a centralized view of performance across hospital partner programs.</p></section>
+<section><h4>Project Goal</h4><p>Develop a standardized executive reporting system that provided real-time visibility into organizational performance, improved leadership decision-making, and created a single source of truth for operational KPIs across all hospital partner programs.</p></section>
+<section><h4>My Role</h4><p>As Regional Manager, I partnered with executive leadership to identify the most meaningful operational KPIs and helped shape the dashboard design from an end-user perspective. I collaborated on metric selection, provided operational input to improve dashboard usability, and trained Site Managers on how to interpret the dashboard, monitor performance against goals, and use the data for SMART goal planning.</p></section>
+<section><h4>Stakeholders</h4><ul><li>Executive Leadership</li><li>Regional Directors</li><li>Regional Managers</li><li>Site Managers</li></ul></section>
+<section><h4>Planning Phase</h4><ul><li>Collaborated with executives to identify high-value operational KPIs.</li><li>Defined reporting requirements and executive performance measures.</li><li>Standardized metrics across hospital partner programs.</li><li>Organized dashboard views around operational priorities.</li><li>Designed reporting to support executive decision-making and goal tracking.</li></ul></section>
+<section><h4>Execution Phase</h4><ul><li>Partnered in the development of the Power BI dashboard.</li><li>Helped define dashboard metrics and performance indicators.</li><li>Reviewed dashboards to ensure metrics aligned with operational priorities.</li><li>Trained Site Managers on dashboard navigation and interpretation.</li><li>Supported leaders in incorporating dashboard insights into operational planning and SMART goal development.</li></ul></section>
+<section><h4>Strategic Deliverables</h4><ul><li>Executive Power BI dashboard</li><li>Standardized KPI framework</li><li>Executive scorecards</li><li>Target-versus-actual reporting</li><li>Performance ranking dashboards</li><li>Workforce planning metrics</li><li>Site Manager training</li></ul></section>
+<section><h4>Business Impact</h4><ul><li>Replaced time-intensive manual reporting with centralized, real-time performance dashboards.</li><li>Standardized executive reporting across 18 hospital partner programs.</li><li>Increased visibility into organizational performance through live KPI monitoring.</li><li>Enabled leaders to compare actual performance against organizational targets.</li><li>Improved strategic planning by supporting data-driven SMART goals and more proactive operational decision-making.</li><li>Established a consistent reporting framework for executives, regional leaders, and Site Managers.</li></ul></section>
+</div>
+<section class="full-width-block">
+<h4>Project Management Competencies</h4>
+<div class="competency-cloud"><span class="chip">Performance Measurement</span><span class="chip">Stakeholder Management</span><span class="chip">Requirements Gathering</span><span class="chip">Business Intelligence</span><span class="chip">Change Management</span><span class="chip">Communications Management</span><span class="chip">Training &amp; Knowledge Transfer</span><span class="chip">Process Improvement</span><span class="chip">Benefits Realization</span></div>
+</section><section class="key-outcomes"><h4>Key Outcomes</h4><ul><li>Replaced time-intensive manual reporting with centralized, real-time performance dashboards.</li><li>Standardized executive reporting across 18 hospital partner programs.</li><li>Increased visibility into organizational performance through live KPI monitoring.</li><li>Enabled leaders to compare actual performance against organizational targets.</li></ul></section>
+</div>
+</article>
+<article class="project-card" data-category="Performance Management" id="project-7">
+<div class="project-index-label">CASE STUDY 07</div><div class="project-summary">
+<div class="project-number">Project 07</div>
+<div class="project-heading-wrap">
+<div class="eyebrow">Performance Management</div>
+<h3>Regional Performance Management &amp; Operational Excellence Program</h3>
+<p class="org">COPE Health Solutions</p>
+<div class="meta">
+<span><strong class="timeline-label">Project Timeline:</strong> April 2025 – Present</span>
+<span>Regional Manager</span>
+</div>
+</div>
+</div>
+<div class="highlight-row"><span class="chip">5 hospital programs</span><span class="chip">5 direct reports</span><span class="chip">9 leaders coached</span><span class="chip">Weekly reviews</span></div>
+<p class="summary-copy">Led operational performance management across five hospital partner programs, providing direct leadership to five Site Managers while coaching nine operational leaders to improve performance against key organizational metrics. Through weekly business reviews, KPI analysis, leadership coaching, and structured performance planning, I partnered with managers to strengthen operational execution, improve accountability, and support contractual performance expectations.</p>
+<button aria-controls="details-7" aria-expanded="false" class="toggle">
+        View full case study <span aria-hidden="true">+</span>
+</button>
+<div class="details" id="details-7">
+<div class="section-grid">
+<section><h4>Business Problem</h4><p>Hospital partner programs were responsible for meeting contractual expectations related to recruitment, enrollment, workforce staffing, operational compliance, and program performance. Performance varied across sites, requiring consistent leadership oversight, structured coaching, and proactive performance management to ensure organizational goals were achieved. Without regular performance reviews and data-driven coaching, Site Managers had limited visibility into performance trends and fewer opportunities to proactively address operational challenges.</p></section>
+<section><h4>Project Goal</h4><p>Establish a consistent operational performance management process that enabled Site Managers to monitor KPIs, strengthen operational execution, and achieve organizational and hospital partner performance goals.</p></section>
+<section><h4>My Role</h4><p>As Regional Manager, I directly supervised five Site Managers while providing coaching and operational guidance to nine leaders across five hospital programs. I facilitated weekly business reviews, analyzed performance dashboards, reviewed and refined SMART goals, identified operational risks, and coached leaders on strategies to improve recruitment, staffing, enrollment, and overall program performance.</p></section>
+<section><h4>Stakeholders</h4><ul><li>Executive Leadership</li><li>Regional Directors</li><li>Five Site Managers (direct reports)</li><li>Additional Regional Leaders</li><li>Hospital Leadership</li><li>Volunteer Program Coordinators</li></ul></section>
+<section><h4>Planning Phase</h4><ul><li>Established a cadence of weekly performance reviews.</li><li>Identified priority KPIs for each hospital program.</li><li>Prepared performance summaries using operational dashboards and reports.</li><li>Reviewed Site Managers' SMART goals and action plans before coaching sessions.</li><li>Identified emerging operational risks and opportunities for improvement.</li></ul></section>
+<section><h4>Execution Phase</h4><ul><li>Conducted weekly one-on-one performance reviews with Site Managers.</li><li>Reviewed KPI dashboards and operational trends to identify performance gaps.</li><li>Refined SMART goals and action plans with leaders to improve execution.</li><li>Coached Site Managers on recruitment strategies, workforce planning, enrollment performance, and operational problem-solving.</li><li>Shared best practices across hospital programs to promote consistency and continuous improvement.</li><li>Monitored progress and adjusted action plans based on performance results.</li></ul></section>
+<section><h4>Strategic Deliverables</h4><ul><li>Weekly performance reviews</li><li>Leadership coaching sessions</li><li>KPI performance summaries</li><li>SMART goal refinement</li><li>Performance improvement plans</li><li>Operational recommendations</li><li>Best practice sharing across sites</li></ul></section>
+<section><h4>Business Impact</h4><ul><li>Established a structured, data-driven performance management process across five hospital partner programs.</li><li>Provided direct leadership to five Site Managers and coaching to nine operational leaders.</li><li>Increased accountability through weekly KPI reviews and measurable action planning.</li><li>Improved leaders' ability to identify performance gaps early and implement targeted operational improvements.</li><li>Fostered a culture of continuous improvement and knowledge sharing across multiple hospital programs.</li></ul></section>
+</div>
+<section class="full-width-block">
+<h4>Project Management Competencies</h4>
+<div class="competency-cloud"><span class="chip">Leadership &amp; Team Development</span><span class="chip">Performance Management</span><span class="chip">Stakeholder Engagement</span><span class="chip">Monitoring &amp; Controlling</span><span class="chip">Risk Management</span><span class="chip">Continuous Improvement</span><span class="chip">Change Management</span><span class="chip">Communications Management</span><span class="chip">Operational Excellence</span></div>
+</section><section class="key-outcomes"><h4>Key Outcomes</h4><ul><li>Established a structured, data-driven performance management process across five hospital partner programs.</li><li>Provided direct leadership to five Site Managers and coaching to nine operational leaders.</li><li>Increased accountability through weekly KPI reviews and measurable action planning.</li><li>Improved leaders' ability to identify performance gaps early and implement targeted operational improvements.</li></ul></section>
+</div>
+</article>
+<article class="project-card" data-category="Program Implementation" id="project-8">
+<div class="project-index-label">CASE STUDY 08</div><div class="project-summary">
+<div class="project-number">Project 08</div>
+<div class="project-heading-wrap">
+<div class="eyebrow">Program Implementation</div>
+<h3>NICU Volunteer Program Launch &amp; Operational Readiness</h3>
+<p class="org">COPE Health Solutions in partnership with Kaiser Permanente Anaheim</p>
+<div class="meta">
+<span><strong class="timeline-label">Project Timeline:</strong> May 2026 – June 2026</span>
+<span>Regional Manager / Project Lead</span>
+</div>
+</div>
+</div>
+<div class="highlight-row"><span class="chip">6-week implementation</span><span class="chip">12 volunteers</span><span class="chip">Specialized clinical environment</span><span class="chip">15+ launches led</span></div>
+<p class="summary-copy">Led the planning and implementation of a new volunteer program within the Neonatal Intensive Care Unit (NICU) at Kaiser Permanente Anaheim. Over a six-week implementation period, partnered with nursing leadership to define volunteer responsibilities, develop department-specific training, create operational workflows, and prepare 12 volunteers for a successful go-live. This launch expanded volunteer services into a highly specialized clinical environment while supporting patient, family, and staff experience.</p>
+<button aria-controls="details-8" aria-expanded="false" class="toggle">
+        View full case study <span aria-hidden="true">+</span>
+</button>
+<div class="details" id="details-8">
+<div class="section-grid">
+<section><h4>Business Problem</h4><p>Kaiser Permanente Anaheim sought to expand volunteer services into the NICU to enhance support for patients, families, and clinical staff. Because the NICU serves medically fragile newborns, implementing volunteers required careful planning, clearly defined scopes of responsibility, specialized training, and close collaboration with nursing leadership to ensure patient safety and seamless integration into departmental workflows.</p></section>
+<section><h4>Project Goal</h4><p>Successfully launch a sustainable volunteer program within the NICU by designing department-specific workflows, preparing volunteers, and ensuring operational readiness before implementation.</p></section>
+<section><h4>My Role</h4><p>As Regional Manager, I served as the implementation lead throughout the six-week planning period. I partnered directly with the NICU Nurse Leader to understand departmental operations, conducted onsite workflow assessments, developed a department-specific volunteer manual and scope of responsibilities, coordinated stakeholder communication, prepared volunteers for the specialized environment, and oversaw implementation through go-live.</p></section>
+<section><h4>Stakeholders</h4><ul><li>Kaiser Permanente Anaheim Leadership</li><li>NICU Nurse Leader</li><li>NICU Clinical Staff</li><li>Volunteer Services</li><li>COPE Health Solutions Leadership</li><li>Site Manager</li><li>12 NICU Volunteers</li></ul></section>
+<section><h4>Planning Phase</h4><ul><li>Conducted discovery meetings with the NICU Nurse Leader to understand department operations and patient needs.</li><li>Completed an onsite department tour to observe workflows and identify appropriate volunteer opportunities.</li><li>Developed a department-specific volunteer manual outlining workflows, expectations, and operational procedures.</li><li>Defined the volunteer scope of practice to ensure responsibilities aligned with clinical and safety requirements.</li><li>Planned volunteer recruitment, onboarding, scheduling, and training for launch.</li></ul></section>
+<section><h4>Execution Phase</h4><ul><li>Trained and prepared 12 volunteers for service within the NICU.</li><li>Coordinated implementation activities between hospital leadership and COPE teams.</li><li>Supported Site Manager readiness and staffing plans.</li><li>Ensured volunteers understood departmental workflows and role expectations.</li><li>Oversaw go-live activities and addressed operational questions during implementation.</li></ul></section>
+<section><h4>Strategic Deliverables</h4><ul><li>Department implementation plan</li><li>NICU volunteer manual</li><li>Department-specific volunteer scope of practice</li><li>Training curriculum and onboarding materials</li><li>Staffing and scheduling plan</li><li>Operational readiness checklist</li><li>Go-live support</li></ul></section>
+<section><h4>Business Impact</h4><ul><li>Successfully launched volunteer services within Kaiser Permanente Anaheim's NICU.</li><li>Expanded volunteer support into a highly specialized clinical department.</li><li>Prepared and onboarded 12 volunteers through department-specific training.</li><li>Established standardized workflows and role expectations to support safe, consistent volunteer integration.</li><li>Strengthened collaboration between COPE Health Solutions and Kaiser Permanente nursing leadership during implementation.</li><li>Contributed to improved patient, family, and staff support through the introduction of structured volunteer services.</li></ul></section>
+</div>
+<section class="full-width-block">
+<h4>Project Management Competencies</h4>
+<div class="competency-cloud"><span class="chip">Project Planning</span><span class="chip">Scope Management</span><span class="chip">Stakeholder Engagement</span><span class="chip">Change Management</span><span class="chip">Operational Readiness</span><span class="chip">Risk Management</span><span class="chip">Training &amp; Development</span><span class="chip">Resource Planning</span><span class="chip">Implementation Management</span><span class="chip">Communications Management</span></div>
+</section><section class="key-outcomes"><h4>Key Outcomes</h4><ul><li>Successfully launched volunteer services within Kaiser Permanente Anaheim's NICU.</li><li>Expanded volunteer support into a highly specialized clinical department.</li><li>Prepared and onboarded 12 volunteers through department-specific training.</li><li>Established standardized workflows and role expectations to support safe, consistent volunteer integration.</li></ul></section>
+</div>
+</article>
+<article class="project-card" data-category="Process Standardization" id="project-9">
+<div class="project-index-label">CASE STUDY 09</div><div class="project-summary">
+<div class="project-number">Project 09</div>
+<div class="project-heading-wrap">
+<div class="eyebrow">Process Standardization</div>
+<h3>Volunteer Shift Capacity Optimization &amp; Accountability Initiative</h3>
+<p class="org">COPE Health Solutions</p>
+<div class="meta">
+<span><strong class="timeline-label">Project Timeline:</strong> November 2025 – Present</span>
+<span>Regional Manager / Project Lead</span>
+</div>
+</div>
+</div>
+<div class="highlight-row"><span class="chip">5 hospital programs</span><span class="chip">90% shift capacity KPI</span><span class="chip">Standardized accountability</span><span class="chip">Weekly monitoring</span></div>
+<p class="summary-copy">Designed and implemented a standardized operational workflow to improve volunteer shift fulfillment and support COPE Health Solutions' regional Key Performance Indicator (KPI) of maintaining 90% volunteer shift capacity. Developed consistent processes for shift pickup, attendance monitoring, coaching, documentation, and progressive accountability, enabling Site Managers to proactively address attendance challenges and improve operational reliability across multiple hospital partner programs.</p>
+<button aria-controls="details-9" aria-expanded="false" class="toggle">
+        View full case study <span aria-hidden="true">+</span>
+</button>
+<div class="details" id="details-9">
+<div class="section-grid">
+<section><h4>Business Problem</h4><p>COPE Health Solutions established a regional KPI requiring volunteer programs to maintain 90% shift capacity to ensure hospitals received consistent volunteer support. Variability in attendance management and follow-up processes across sites made it difficult to consistently achieve this KPI and created unnecessary operational risk. Without a standardized approach, Site Managers managed attendance issues differently, leading to inconsistent volunteer accountability and fluctuations in staffing coverage.</p></section>
+<section><h4>Project Goal</h4><p>Develop a standardized operational workflow that improved volunteer shift fulfillment, created consistent attendance management practices, and supported achievement of COPE Health Solutions' 90% volunteer shift capacity KPI.</p></section>
+<section><h4>My Role</h4><p>As Regional Manager, I designed a standardized process for managing volunteer attendance across my region. I created workflows that guided Site Managers through shift pickup procedures, attendance monitoring, volunteer counseling, documentation, and progressive corrective actions. I coached leaders on implementation, reviewed shifting performance during weekly operational meetings, and partnered with managers to improve staffing reliability.</p></section>
+<section><h4>Stakeholders</h4><ul><li>COPE Executive Leadership</li><li>Regional Directors</li><li>Five Site Managers (direct reports)</li><li>Hospital Department Leaders</li><li>Volunteer Services</li><li>Volunteers</li></ul></section>
+<section><h4>Planning Phase</h4><ul><li>Evaluated regional shift fulfillment trends against the 90% KPI.</li><li>Identified inconsistencies in attendance management across hospital programs.</li><li>Mapped the volunteer scheduling and attendance workflow.</li><li>Defined standardized counseling and accountability expectations.</li><li>Created documentation to ensure consistent implementation across all sites.</li></ul></section>
+<section><h4>Execution Phase</h4><ul><li>Implemented a standardized workflow for volunteers to claim and fulfill open shifts.</li><li>Established a consistent attendance monitoring process.</li><li>Developed a progressive counseling and accountability framework for repeated attendance concerns.</li><li>Coached Site Managers on applying the workflow consistently.</li><li>Reviewed shift capacity metrics during weekly operational meetings and adjusted strategies as needed to support KPI attainment.</li></ul></section>
+<section><h4>Strategic Deliverables</h4><ul><li>Standardized shift management workflow</li><li>Volunteer attendance management process</li><li>Progressive counseling framework</li><li>Documentation standards</li><li>Site Manager implementation guide</li><li>KPI monitoring process</li></ul></section>
+<section><h4>Business Impact</h4><ul><li>Standardized volunteer attendance management across five hospital partner programs.</li><li>Increased consistency in how Site Managers addressed attendance and scheduling challenges.</li><li>Improved operational visibility through structured monitoring of volunteer shift fulfillment.</li><li>Supported COPE Health Solutions' regional KPI of maintaining 90% volunteer shift capacity.</li><li>Reduced variability in staffing practices and strengthened operational reliability across the region.</li></ul></section>
+</div>
+<section class="full-width-block">
+<h4>Project Management Competencies</h4>
+<div class="competency-cloud"><span class="chip">Operational Excellence</span><span class="chip">Process Improvement</span><span class="chip">Workflow Design</span><span class="chip">Performance Management</span><span class="chip">Change Management</span><span class="chip">Stakeholder Engagement</span><span class="chip">Risk Mitigation</span><span class="chip">Continuous Improvement</span><span class="chip">Standardization</span><span class="chip">KPI Management</span></div>
+</section><section class="key-outcomes"><h4>Key Outcomes</h4><ul><li>Standardized volunteer attendance management across five hospital partner programs.</li><li>Increased consistency in how Site Managers addressed attendance and scheduling challenges.</li><li>Improved operational visibility through structured monitoring of volunteer shift fulfillment.</li><li>Supported COPE Health Solutions' regional KPI of maintaining 90% volunteer shift capacity.</li></ul></section>
+</div>
+</article>
+<article class="project-card" data-category="Executive Relationship Management &amp; Strategic Partnership" id="project-10">
+<div class="project-index-label">CASE STUDY 10</div><div class="project-summary">
+<div class="project-number">Project 10</div>
+<div class="project-heading-wrap">
+<div class="eyebrow">Executive Relationship Management &amp; Strategic Partnership</div>
+<h3>Hospital Partner Relationship Management &amp; Strategic Operations</h3>
+<p class="org">COPE Health Solutions</p>
+<div class="meta">
+<span><strong class="timeline-label">Project Timeline:</strong> April 2025 – Present</span>
+<span>Regional Manager</span>
+</div>
+</div>
+</div>
+<div class="highlight-row"><span class="chip">5 hospital programs</span><span class="chip">Executive liaison</span><span class="chip">Issue resolution</span><span class="chip">Service expansion</span></div>
+<p class="summary-copy">Served as the primary operational partner for five hospital programs, building collaborative relationships with hospital leadership to ensure program success, address operational challenges, and align volunteer services with departmental priorities. Through regular executive meetings, issue resolution, performance reviews, and cross-functional collaboration, strengthened partnerships that supported operational excellence and long-term program growth.</p>
+<button aria-controls="details-10" aria-expanded="false" class="toggle">
+        View full case study <span aria-hidden="true">+</span>
+</button>
+<div class="details" id="details-10">
+<div class="section-grid">
+<section><h4>Business Problem</h4><p>Hospital volunteer programs require ongoing collaboration between healthcare leaders and external program administrators. As operational priorities evolved, hospital leaders needed a responsive partner who could adapt volunteer services, resolve issues quickly, and ensure programs continued to meet departmental needs and organizational expectations. Without consistent communication and proactive relationship management, operational issues could remain unresolved, reducing program effectiveness and stakeholder confidence.</p></section>
+<section><h4>Project Goal</h4><p>Develop strong strategic partnerships with hospital leaders while ensuring volunteer programs remained responsive to changing operational needs, maintained high service quality, and consistently delivered value to clinical departments.</p></section>
+<section><h4>My Role</h4><p>As Regional Manager, I served as the primary operational liaison for five hospital partner programs. I met regularly with nurse leaders, department managers, volunteer services, and hospital administrators to review program performance, identify new opportunities, resolve operational concerns, and implement improvements that aligned volunteer services with hospital priorities.</p></section>
+<section><h4>Stakeholders</h4><ul><li>Hospital Executives</li><li>Directors</li><li>Nurse Managers</li><li>Volunteer Services Departments</li><li>Clinical Department Leaders</li><li>COPE Executive Leadership</li><li>Regional Directors</li><li>Site Managers</li></ul></section>
+<section><h4>Planning Phase</h4><ul><li>Scheduled recurring stakeholder meetings.</li><li>Gathered feedback from hospital leaders.</li><li>Reviewed operational performance metrics.</li><li>Identified opportunities to expand or improve volunteer services.</li><li>Prioritized operational initiatives based on hospital needs.</li></ul></section>
+<section><h4>Execution Phase</h4><ul><li>Conducted regular meetings with hospital leadership.</li><li>Responded to operational concerns and developed solutions.</li><li>Coordinated implementation of new department requests.</li><li>Aligned volunteer resources with departmental priorities.</li><li>Partnered with Site Managers to execute operational improvements.</li><li>Maintained communication between hospital leadership and COPE executives.</li></ul></section>
+<section><h4>Strategic Deliverables</h4><ul><li>Executive meeting summaries</li><li>Operational improvement recommendations</li><li>Service expansion plans</li><li>Department implementation requests</li><li>Performance updates</li><li>Partnership action plans</li></ul></section>
+<section><h4>Business Impact</h4><ul><li>Strengthened relationships across five hospital partner programs.</li><li>Increased collaboration between COPE Health Solutions and hospital leadership.</li><li>Improved responsiveness to changing departmental needs.</li><li>Supported successful implementation of new volunteer initiatives and service expansions.</li><li>Helped sustain long-term hospital partnerships through proactive operational support.</li></ul></section>
+</div>
+<section class="full-width-block">
+<h4>Project Management Competencies</h4>
+<div class="competency-cloud"><span class="chip">Stakeholder Engagement</span><span class="chip">Executive Communication</span><span class="chip">Relationship Management</span><span class="chip">Strategic Planning</span><span class="chip">Issue Resolution</span><span class="chip">Change Management</span><span class="chip">Operational Leadership</span><span class="chip">Cross-functional Collaboration</span><span class="chip">Benefits Realization</span></div>
+</section><section class="key-outcomes"><h4>Key Outcomes</h4><ul><li>Strengthened relationships across five hospital partner programs.</li><li>Increased collaboration between COPE Health Solutions and hospital leadership.</li><li>Improved responsiveness to changing departmental needs.</li><li>Supported successful implementation of new volunteer initiatives and service expansions.</li></ul></section>
+</div>
+</article>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="shell">
+<div class="eyebrow" style="color:#9fe2dc;">Healthcare Operations Leadership</div>
+<h2 style="color:white;">From strategy to measurable execution.</h2>
+<p>This portfolio presents representative projects led across hospital partner programs and specialized clinical departments, highlighting a consistent ability to build systems, align stakeholders, develop leaders, and improve operational performance.</p>
+</div>
+</footer>
+<button aria-label="Back to top" class="backtop">↑</button>
+<script>
+    const toggles = document.querySelectorAll('.toggle');
+    toggles.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const details = document.getElementById(btn.getAttribute('aria-controls'));
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        details.classList.toggle('open');
+        btn.firstChild.textContent = expanded ? 'View full case study ' : 'Hide case study ';
+      });
+    });
+
+    const filters = document.querySelectorAll('.filter');
+    const cards = document.querySelectorAll('.project-card');
+    filters.forEach(filter => {
+      filter.addEventListener('click', () => {
+        filters.forEach(f => f.classList.remove('active'));
+        filter.classList.add('active');
+        const value = filter.dataset.filter;
+        cards.forEach(card => {
+          card.style.display = value === 'All' || card.dataset.category === value ? '' : 'none';
+        });
+      });
+    });
+
+    const backTop = document.querySelector('.backtop');
+    window.addEventListener('scroll', () => {
+      backTop.classList.toggle('show', window.scrollY > 600);
+    });
+    backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  </script>
+</body>
+</html>
